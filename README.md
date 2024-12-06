@@ -98,7 +98,7 @@ As a Product Owner, I want to collect information when the users click on the fo
             - Posible permutations.
             - Individual group card design (closed and open)
             - Details about the styling.
-        - Prototype (https://www.figma.com/proto/ToFsXLYWhTAP1ZJRsXAcxE/Engineering-Front-End-Test?page-id=2%3A11673&node-id=2-11674&node-type=canvas&viewport=229%2C295%2C0.25&t=5pbpl4j37SDWUqkc-1&scaling=min-zoom&content-scaling=fixed)
+        - Prototype (https://www.figma.com/proto/ToFsXLYWhTAP1ZJRsXAcxE/Engineering-Front-End-Test?page-id=2%3A11673&node-id=2-11674&node-type=frame&viewport=345%2C276%2C0.25&t=zt8S0jDYemxsJYDU-1&scaling=scale-down-width&content-scaling=fixed)
             - Interactions with the groups cards
     - Create styles using pure CSS. Avoid using prebuilt libraries or frameworks.
 2. **REST API Integration**
