@@ -1,14 +1,14 @@
 # Hello Insight Front-End Technical Test
 
-Welcome to our technical test! Below are the instructions and requirements for completing the task. This test will assess your skills in Angular, Typescript, HTML, and CSS by implementing a user interface based on a provided Figma prototype and integrating it with a REST API.
+Welcome to our technical test! Below are the instructions and requirements for completing the task. This test will assess your skills in Angular, Typescript, HTML, CSS and SCSS by implementing a user interface based on a provided Figma prototype and integrating it with a REST API.
 
 ## Requirements
 
 Technical Stack
 
-- **Framework**: Angular (version 12 or higher).
+- **Framework**: Angular (version 15 or higher).
 - **Language**: TypeScript.
-- **Styling**: CSS (from scratch, no frameworks like Bootstrap or Tailwind).
+- **Styling**: CSS/SCSS (from scratch, no frameworks like Bootstrap or Tailwind).
 - **Optional**: Docker for containerizing the application.
 ---
 
@@ -98,7 +98,7 @@ As a Product Owner, I want to collect information when the users click on the fo
             - Posible permutations.
             - Individual group card design (closed and open)
             - Details about the styling.
-        - Prototype (https://www.figma.com/proto/ToFsXLYWhTAP1ZJRsXAcxE/Engineering-Front-End-Test?node-id=2-11674&node-type=frame&t=KeOegSxWB2t3gxel-0&scaling=min-zoom&content-scaling=fixed&page-id=2%3A11673&starting-point-node-id=2%3A11674)
+        - Prototype (https://www.figma.com/proto/ToFsXLYWhTAP1ZJRsXAcxE/Engineering-Front-End-Test?page-id=2%3A11673&node-id=2-11674&node-type=canvas&viewport=229%2C295%2C0.25&t=5pbpl4j37SDWUqkc-1&scaling=min-zoom&content-scaling=fixed)
             - Interactions with the groups cards
     - Create styles using pure CSS. Avoid using prebuilt libraries or frameworks.
 2. **REST API Integration**
@@ -190,7 +190,7 @@ This endpoint can be used to check what events have been tracked so far.
 ## Deliverables
 
 - A fully functional Angular application.
-- CSS files defining the styles for the application.
+- CSS/SCSS files defining the styles for the application.
 - Readme with the steps to run the application locally.
 - (Optional) A Dockerfile to run the application in a container
 
