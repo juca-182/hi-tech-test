@@ -1,0 +1,124 @@
+@use "../../../../../assets/style/variables.scss" as *;
+@use "../../../../../assets/style/mixins/button.mixins.scss" as *;
+
+.group-card {
+  display: grid;
+  grid-template-columns: 48% 45% 7%;
+  width: 72.3rem;
+  align-items: center;
+  background-color: #ffffff;
+  border: 0.063rem solid $gray-350;
+  border-radius: 0.375rem;
+  box-shadow: 0px 0.25rem 0.5rem rgba(22, 23, 26, 0.04);
+
+  &.no-border {
+    border-bottom-right-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+
+  .group-info {
+    border-right: 0.063rem solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.375rem 0px 0px 0.375rem;
+    padding: 1.938rem 2rem;
+    background-color: $gray-25;
+  }
+
+  .survey-info {
+    display: grid;
+    grid-template-areas:
+      "icon data"
+      "icon badge-main";
+    width: 24rem;
+
+    .check-in-icon-disabled {
+      margin-top: 0.625rem;
+      svg {
+        width: 2.625rem;
+        path {
+          transform: scale(0.9168);
+        }
+      }
+    }
+  }
+
+  .badge-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-area: badge-main;
+    gap: 0.5rem;
+    max-width: 16.7rem;
+
+    .badge {
+      width: 100% !important;
+    }
+  }
+
+  .icon-survey {
+    grid-area: icon;
+    display: flex;
+    justify-content: right;
+  }
+
+  .survey-header {
+    grid-area: data;
+  }
+
+  .regular-badge {
+    flex-grow: 2;
+    grid-area: regular-badge;
+  }
+
+  .small-badge {
+    grid-area: small-badge;
+  }
+
+  .survey-header {
+    display: flex !important;
+    align-items: center;
+
+    .success::before {
+      content: "|";
+      color: $magenta-500;
+      padding: 0 0.5rem 0 0.5rem;
+    }
+
+    .warning:before {
+      content: "|";
+      color: $gray-500;
+      padding: 0 0.5rem 0 0.5rem;
+    }
+  }
+
+  .show-details-btn {
+    @include button-reset;
+    cursor: pointer;
+    background-color: $gray-25;
+    border-left: 0.063rem solid rgba(0, 0, 0, 0.125);
+    border-radius: 0 0.313rem 0.313rem 0px;
+    padding: 0.5rem;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $blue-500;
+      border-radius: 0 0.313rem 0px;
+
+      .icon-component-container {
+        svg path {
+          fill: #ffffff;
+        }
+      }
+    }
+    &.icon-up-active {
+      border-radius: 0 0.313rem 0 0;
+    }
+
+    .icon-up {
+      transform: rotate(180deg);
+    }
+  }
+}

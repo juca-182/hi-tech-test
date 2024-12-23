@@ -1,0 +1,83 @@
+@use "sass:color";
+@use "../../../../assets/style/variables.scss" as *;
+@use "../../../../assets/style/mixins/button.mixins.scss" as *;
+
+.badge-container {
+  display: flex;
+}
+
+.badge {
+  @include button-reset;
+  display: flex;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+  .badge-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .icon {
+    padding-right: 0.5rem;
+  }
+
+  &.right {
+    .icon {
+      order: 1;
+      padding-left: 0.3rem;
+    }
+  }
+
+  &.bg-default {
+    background-color: #e8eaeb;
+    color: #16171a;
+  }
+
+  &.bg-success {
+    background-color: $magenta-500;
+    color: $white-700;
+
+    &.survey-status {
+      background: linear-gradient(
+        to left,
+        $gray-25 70%,
+        $magenta-500 30%
+      ) !important;
+      padding: 0.1rem 0.3rem 0px 0.313rem;
+      &.badge {
+        height: 1.719rem;
+      }
+    }
+  }
+
+  &.bg-warning {
+    background-color: $red-500;
+    color: black;
+    &.survey-status {
+      background: linear-gradient(
+        to left,
+        $gray-25 70%,
+        $red-500 30%
+      ) !important;
+      padding: 0.1rem 0.3rem 0px 0.313rem;
+      &.badge {
+        height: 1.719rem;
+      }
+    }
+  }
+
+  &.bg-none {
+    padding-left: 0;
+  }
+
+  &.hover-disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}

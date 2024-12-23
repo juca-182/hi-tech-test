@@ -1,0 +1,61 @@
+@use '../../../../assets/style/variables.scss' as *;
+
+app-typography {
+  div {
+    font-family: 'work sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  .body {
+    &.small {
+      font-size: $typography-font-body-small !important;
+    }
+
+    &.medium {
+      font-size: $typography-font-body-medium;
+    }
+  }
+
+  .header {
+    &.medium {
+      font-size: $typography-font-header-large;
+    }
+    &.large {
+      font-size: $typography-font-header-large;
+    }
+
+    &.extra-large {
+      font-size: $typography-font-header-extra-large;
+    }
+  }
+
+  .default {
+    color: $typography-black-color;
+  }
+
+  .light-gray {
+    color: $typography-light-gray-color;
+  }
+
+  .dark-gray {
+    color: $typography-dark-gray-color;
+  }
+
+  .white {
+    color: $typography-white-color;
+  }
+  .light {
+    font-weight: $typography-font-weight-light;
+  }
+
+  .regular {
+    font-weight: $typography-font-weight-regular;
+  }
+
+
+  .bold {
+    font-weight: $typography-font-weight-bold;
+  }
+}

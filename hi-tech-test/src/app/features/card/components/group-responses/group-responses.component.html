@@ -1,0 +1,86 @@
+<!-- <div class="responses-main-container">
+  <div class="responses-container">
+    <div class="valid-content">
+      <app-badge
+        [iconPosition]="'right'"
+        [text]="'VALID RESPONSES'"
+        [icon]="'info-solid-icon-b'"
+        [fontSize]="'small'"
+        (badgeClick)="sendClickedData($event)"
+      ></app-badge>
+      <app-typography
+        [fontWeight]="'bold'"
+        [type]="'header'"
+        [size]="'extra-large'"
+      >
+        {{ valid }}
+      </app-typography>
+    </div>
+    <div class="target-content">
+      <app-badge
+        [iconPosition]="'right'"
+        [text]="'RESPONSE TARGET'"
+        [icon]="'info-solid-icon-b'"
+        (badgeClick)="sendClickedData($event)"
+      ></app-badge>
+      <app-typography
+        [fontWeight]="'bold'"
+        [type]="'header'"
+        [size]="'extra-large'"
+        [fontColor]="'light-gray'"
+      >
+        {{ target }}
+      </app-typography>
+    </div>
+  </div>
+  <app-progress-bar [target]="target" [valid]="valid"></app-progress-bar>
+</div>
+
+<button (click)="openModal(modalTemplate)"></button>
+
+<ng-template #modalTemplate>
+  <div>this is my custom modal</div>
+</ng-template> -->
+
+
+<div class="responses-main-container">
+  <div class="responses-container">
+    <div class="valid-content">
+      <app-badge
+        [iconPosition]="'right'"
+        [text]="'VALID RESPONSES'"
+        [icon]="'info-solid-icon-b'"
+        [fontSize]="'small'"
+        (badgeClick)="sendClickedData($event); openModal($event)"
+      ></app-badge>
+      <app-typography
+        [fontWeight]="'bold'"
+        [type]="'header'"
+        [size]="'extra-large'"
+      >
+        {{ valid }}
+      </app-typography>
+    </div>
+    <div class="target-content">
+      <app-badge
+        [iconPosition]="'right'"
+        [text]="'RESPONSE TARGET'"
+        [icon]="'info-solid-icon-b'"
+        (badgeClick)="sendClickedData($event);openModal($event)"
+      ></app-badge>
+      <app-typography
+        [fontWeight]="'bold'"
+        [type]="'header'"
+        [size]="'extra-large'"
+        [fontColor]="'light-gray'"
+      >
+        {{ target }}
+      </app-typography>
+    </div>
+  </div>
+  <app-progress-bar [target]="target" [valid]="valid"></app-progress-bar>
+</div>
+
+<!-- <button (click)="openModal($event)">Open Modal</button> -->
+
+<ng-template #modalTemplate></ng-template>

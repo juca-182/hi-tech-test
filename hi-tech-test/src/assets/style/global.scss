@@ -1,0 +1,18 @@
+@use 'variables.scss' as *;
+@use 'mixins/fonts.mixins.scss' as *;
+@use 'fonts.scss' as *;
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'work sans', sans-serif;
+  font-size: $typography-font-body-medium;
+  color: $typography-black-color;
+  background-color: #ffffff;
+}
+

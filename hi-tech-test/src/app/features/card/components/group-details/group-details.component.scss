@@ -1,0 +1,85 @@
+@use "../../../../../assets/style/variables.scss" as *;
+@use "../../../../../assets/style/mixins/button.mixins.scss" as *;
+
+.group-details-container {
+  background-color: $white-700;
+  border-radius: 0 0 0.438rem 0.438rem;
+  display: flex;
+  flex-direction: row;
+  width: 72.3rem;
+  border-left: 0.063rem solid $gray-350;
+  border-bottom: 0.063rem solid $gray-350;
+  border-right: 0.063rem solid $gray-350;
+  box-shadow: 0px 0.25rem 0.5rem rgba(22, 23, 26, 0.04);
+
+  .step-container {
+    .step-shape {
+      width: 5rem;
+      height: 22.8rem;
+      background: $magenta-500;
+      position: relative;
+      border-radius: 0 0 0 0.375rem;
+    }
+    .step-shape::before {
+      content: "";
+      position: absolute;
+      transform: rotate(180deg);
+      left: 82%;
+      top: 10rem;
+      border-top: 1.5rem solid transparent;
+      border-right: 1.563rem solid $magenta-500;
+      border-bottom: 1.5rem solid transparent;
+    }
+    .icon-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 9.8rem;
+    }
+  }
+
+  .info-date-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .info-date-wrapper {
+      margin: 0px 0 0px 0.563rem;
+
+      .info-date {
+        margin-top: 0.125rem;
+      }
+    }
+  }
+
+  .group-details-info {
+    margin: 1rem 0px 0px 0px;
+  }
+
+  .group-details-icon {
+    flex-grow: 1;
+  }
+
+  .group-details-content-main {
+    margin: 1.625rem 0px 0px 1.25rem;
+    flex-grow: 2;
+  }
+
+  .group-details-actions {
+    background-color: $gray-25;
+    width: 28rem;
+    padding-top: 0.3rem;
+    border-radius: 0 0 0.438rem 0;
+    border-left: 0.063rem solid $gray-350;
+
+    flex-grow: 4;
+
+    .admin-container-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1.875rem;
+      padding-left: 1.5rem;
+    }
+  }
+}

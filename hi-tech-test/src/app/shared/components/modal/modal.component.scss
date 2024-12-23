@@ -1,0 +1,126 @@
+@use '../../../../assets/style/variables.scss' as *;
+
+
+$modal-header-bg:  $gray-700;
+$modal-content-bg:  #212327;
+$modal-border-radius: 0.75rem;
+$modal-width-small: 20.125rem;
+$modal-width-default: 25rem;
+
+
+.modal-backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.modal {
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: $modal-width-default;
+  border-radius: $modal-border-radius;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+
+  &.tiny {
+    .modal-content {
+      display: flex;
+      align-items: center;
+      background-color: $magenta-500;
+    }
+    width: 7.5rem;
+    height: 2.125rem;
+    border-radius: 0.313rem;
+    display: flex;
+    align-items: center;
+
+    app-typography {
+      width: 5.063rem !important;
+      margin-left: 0.313rem;
+    }
+
+
+  }
+
+  &.small {
+    width: $modal-width-small;
+    height: 7.063rem;
+  }
+
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 0.5rem 0 1rem;
+    background-color: $black-600;
+
+    .modal-header-content {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+
+      .modal-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $modal-header-bg;
+        width: 1.125rem;
+        height: 1.125rem;
+        border-radius: 0.313rem;
+        padding: 0px 0.125rem 0.25rem 0;
+
+        app-icon {
+          width: 0.75rem;
+          height: 0.75rem;
+        }
+
+
+        &.icon-blue-variation {
+          background-color: $azure-700;
+        }
+      }
+    }
+
+
+    .modal-close {
+      cursor: pointer;
+      color: #86909E;
+      font-size: 1.25rem;
+      padding: 0.25rem;
+      line-height: 1;
+      transition: opacity 0.2s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+
+  .modal-content {
+    margin: 0;
+    padding: 1rem;
+    background-color: $modal-content-bg;
+
+
+    app-typography {
+      font-size: 0.813rem;
+      line-height: 1.2;
+      display: block;
+      width: 18.125rem;
+    }
+  }
+}

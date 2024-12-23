@@ -1,0 +1,50 @@
+/*** Gray***/
+
+$gray-25: #F9F9F9;
+$gray-300: #E8EAEB;
+$gray-350: #D7DBDF;
+$gray-500: #86909E;
+$gray-600: #43474F;
+$gray-700: #35383F;
+
+/*** B&W **/
+
+$black-600: #16171A;
+$white-700: #FFFFFF;
+
+
+/*** Blue ***/
+
+$blue-500: #24C4C8;
+
+/*** Azure ***/
+$azure-700: #0396FF;
+
+/*** Magenta ***/
+
+$magenta-500: #B15DCB;
+
+/*** Red ***/
+
+$red-500: #FF246D;
+
+  /*** text colors ***/
+  $typography-black-color: $black-600;
+  $typography-dark-gray-color: $gray-700;
+  $typography-light-gray-color: $gray-500;
+  $typography-white-color: $white-700;
+
+
+  /*** font sizes ***/
+
+  $typography-font-body-small: 14px;
+  $typography-font-body-medium: 1rem;
+
+  $typography-font-header-large: 20px;
+  $typography-font-header-large: 1.5rem;
+  $typography-font-header-extra-large: 60px;
+
+  $typography-font-weight-light: 300;
+  $typography-font-weight-regular: 400;
+  $typography-font-weight-semibold: 600;
+  $typography-font-weight-bold: 700;

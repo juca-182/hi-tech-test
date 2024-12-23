@@ -1,0 +1,92 @@
+<div class="group-details-container">
+  <div class="group-details-icon">
+    <div class="step-container">
+      <div class="step-shape">
+        <div class="icon-container">
+          <app-icon
+            class="number"
+            [iconName]="'check-in-icon-enabled'"
+          ></app-icon>
+          <app-typography [fontColor]="'white'" [fontWeight]="'bold'">
+            Check-In
+          </app-typography>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="group-details-content-main">
+    <div class="group-details-content">
+      <div class="group-details-header">
+        <app-typography
+          class="group-name"
+          [type]="'body'"
+          [fontWeight]="'bold'"
+          [size]="'medium'"
+          >Check-In Survey Collection Progress</app-typography
+        >
+      </div>
+      <div class="group-details-info">
+        <div class="info-date-container">
+          <div class="icon-date">
+            <app-icon [iconName]="'calendar-circle-icon'"></app-icon>
+          </div>
+          <div class="info-date-wrapper">
+            <div class="info-label">
+              <app-typography [fontColor]="'dark-gray'" [fontWeight]="'light'">
+                Planned Check-In Survey Date</app-typography
+              >
+            </div>
+            <div class="info-date">
+              <app-typography [fontColor]="'default'" [fontWeight]="'bold'">
+                {{ group.survey_date }}
+              </app-typography>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group-details-progress">
+        <app-group-responses
+          [id]="group.id"
+          [valid]="group.valid_responses"
+          [target]="group.response_target"
+        ></app-group-responses>
+      </div>
+    </div>
+  </div>
+  <div class="group-details-actions">
+    <div class="admin-title">
+      <app-typography
+        [size]="'medium'"
+        [fontWeight]="'bold'"
+        class="admin-title"
+      >
+        Administering Check-In Surveys
+      </app-typography>
+    </div>
+    <div class="admin-container-actions">
+      <app-group-admin
+        [tooltipText]="'Download'"
+        [textLabel]="'Print And Review Survey Admin Kit'"
+        [icon]="'download-icon'"
+        [link]="group.survey_admin_kit"
+        [index]="1"
+      ></app-group-admin>
+      <app-group-admin
+        [tooltipText]="'Download'"
+        [textLabel]="'Print Backup Surveys'"
+        [icon]="'download-icon'"
+        [link]="group.backup_surveys"
+        [index]="2"
+      ></app-group-admin>
+      <app-group-admin
+        [tooltipText]="'Copy Link'"
+        [textLabel]="'Share Survey Link'"
+        [icon]="'copy-icon'"
+        [link]="group.survey_link"
+        [index]="3"
+        [copy]="true"
+      ></app-group-admin>
+    </div>
+  </div>
+</div>

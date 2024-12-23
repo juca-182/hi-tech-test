@@ -1,0 +1,37 @@
+<ng-container *ngIf="!validResponses && !responseTarget">
+  <div class="badge-container">
+    <button
+      class="badge"
+      [ngClass]="[backgroundClass,  iconPosition]"
+      [class.hover-disabled]="!hoverEnabled"
+      (click)="onBadgeClick($event)"
+    >
+      <div class="badge-content">
+        <app-icon [iconName]="icon" class="icon"></app-icon>
+        <div class="badge-text">
+          <app-typography
+            [fontWeight]="fontWeight"
+            [size]="fontSize"
+            [fontColor]="fontColor"
+            >{{ text }}
+            </app-typography>
+        </div>
+      </div>
+    </button>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="validResponses && responseTarget">
+  <button
+    class="badge"
+    [ngClass]="[backgroundClass, iconPosition, badgeType]"
+    [class.hover-disabled]="!hoverEnabled"
+  >
+    <app-icon [iconName]="icon" class="icon"></app-icon>
+    <div class="badge-text">
+      <app-typography [fontWeight]="fontWeight" [fontColor]="fontColor">
+        {{ text }}</app-typography
+      >
+    </div>
+  </button>
+</ng-container>

@@ -1,0 +1,11 @@
+@use "../../../../assets/style/variables.scss" as *;
+
+.tooltip {
+  position: fixed;
+  background-color: $black-600;
+  border-radius: 0.25rem;
+  color: $white-700;
+  padding: 3px 0.375rem;
+  margin-top: 0.313rem;
+  transform: translateX(-50%);
+}

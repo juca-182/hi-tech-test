@@ -1,0 +1,26 @@
+<div
+  class="modal {{ size }}"
+  [style.top.px]="position.top"
+  [style.left.px]="position.left"
+>
+  <div class="modal-header" *ngIf="!tiny">
+    <div class="modal-header-content">
+      <div [ngClass]="{'icon-blue-variation': iconVariation}"
+        class="modal-icon">
+        <app-icon [iconName]="'info-solid-icon-w'"></app-icon>
+      </div>
+      <app-typography
+        [fontColor]="'white'"
+        [fontWeight]="'bold'"
+        [size]="'small'"
+        >{{ title }}</app-typography
+      >
+    </div>
+    <span class="modal-close" (click)="close()">✕</span>
+  </div>
+  <div class="modal-content">
+    <app-icon *ngIf="tiny" [iconName]="'checkmark-solid-icon'"></app-icon>
+    <app-typography [fontColor]="'white'" >{{ modalText }}</app-typography>
+  </div>
+</div>
+<div class="modal-backdrop" (click)="close()"></div>

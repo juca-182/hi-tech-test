@@ -1,0 +1,36 @@
+@use "../../../../assets/style/variables.scss" as *;
+
+.progress-bar-container {
+  padding-bottom: 5rem;
+}
+.progress-bar {
+  height: 1rem;
+  background-color: $gray-350;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 26.25rem;
+
+  .progress-bar-inner {
+    height: 100%;
+    background-color: $red-500;
+  }
+
+  &.progress-bar--target-met {
+    .progress-bar-inner {
+      background-color: $magenta-500;
+    }
+  }
+
+  &.progress-bar--target-not-met &.progress-bar--no-responses {
+    .progress-bar-inner {
+      background-color: $red-500;
+    }
+  }
+
+  &.progress-bar--no-responses {
+    .progress-bar-inner {
+      background-color: $red-500;
+    }
+  }
+}

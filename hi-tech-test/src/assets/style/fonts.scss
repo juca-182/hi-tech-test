@@ -1,0 +1,16 @@
+@use 'mixins/fonts.mixins.scss' as *;
+
+/*** Work Sans Font ***/
+
+$font-name-work-sans: 'work-sans';
+$folder-work-sans: $font-name-work-sans;
+$file-name-work-sans: $font-name-work-sans;
+$font-weight-work-sans: 300, 400, 600, 700;
+
+@include font(
+  $font-name-work-sans,
+  $folder-work-sans,
+  $file-name-work-sans,
+  $font-weight-work-sans
+);
+

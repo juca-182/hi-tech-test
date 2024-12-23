@@ -1,0 +1,9 @@
+@use "sass:color";
+@use "../variables.scss";
+
+@mixin button-reset {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}

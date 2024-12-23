@@ -1,0 +1,113 @@
+<div class="group-card" [ngClass]="{ 'no-border': showDetails }" *ngIf="group">
+  <div class="group-info">
+    <app-typography
+      [ellipsis]="true"
+      [twoLine]="true"
+      [size]="'large'"
+      [type]="'header'"
+      [fontWeight]="'bold'"
+      >{{ group.name }}</app-typography
+    >
+    <div class="group-site">
+      <div class="badge-container">
+        <app-badge
+          [ellipsis]="true"
+          [text]="group.site | uppercase"
+          [fontWeight]="'regular'"
+          [backgroundColor]="'default'"
+          [icon]="'sites-icon'"
+          [iconPosition]="'left'"
+          [hoverEnabled]="false"
+          [fontSize]="'small'"
+        >
+        </app-badge>
+      </div>
+    </div>
+    <div class="group-participants">
+      <app-badge
+        [ellipsis]="true"
+        [text]="group.participants + ' Group Participants'"
+        [fontWeight]="'light'"
+        [backgroundColor]="'none'"
+        [icon]="'group-participants-icon'"
+        [iconPosition]="'left'"
+        [hoverEnabled]="false"
+      >
+      </app-badge>
+    </div>
+    <app-badge
+      [ellipsis]="true"
+      [text]="group.start_date + ' - ' + group.end_date"
+      [fontWeight]="'light'"
+      [backgroundColor]="'none'"
+      [icon]="'calendar-icon'"
+      [iconPosition]="'left'"
+      [hoverEnabled]="false"
+    >
+    </app-badge>
+  </div>
+  <div class="survey-info-container">
+    <div class="survey-info">
+      <div class="icon-survey">
+        <app-icon class="number" [iconName]="iconCheckIn" [ngClass]="iconCheckIn">
+        </app-icon>
+      </div>
+
+      <div>
+        <div class="survey-header">
+          <app-typography [fontWeight]="'bold'" class="survey-title">
+            Check-In Surveys
+          </app-typography>
+          <span [ngClass]="[calculatedStyles]"></span>
+          <app-typography>{{ group.survey_date }}</app-typography>
+        </div>
+
+        <div class="badge-main-container">
+          <div class="regular-badge">
+            <app-badge
+              [fontColor]="'white'"
+              [icon]="iconBadge"
+              [fontWeight]="'bold'"
+              [backgroundColor]="calculatedStyles"
+              [text]="targetMessage"
+              [hoverEnabled]="false"
+            >
+            </app-badge>
+          </div>
+
+          <div class="small-badge">
+            <app-badge
+              [icon]="'target-met-icon'"
+              [fontWeight]="'bold'"
+              [backgroundColor]="calculatedStyles"
+              [text]="group.valid_responses + ' of ' + group.response_target"
+              [hoverEnabled]="false"
+              [validResponses]="group.valid_responses"
+              [responseTarget]="group.response_target"
+              [badgeType]="'survey-status'"
+              [fontColor]="'dark-gray'"
+              [tooltip]="'Response Target'"
+            >
+            </app-badge>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button
+    [tooltip]="showDetails ? 'Hide Details' : 'Show Details'"
+    class="show-details-btn"
+    (click)="toggleDetails()"
+    [ngClass]="{ 'icon-up-active': showDetails }"
+  >
+    <app-icon
+      [ngClass]="{ 'icon-up': showDetails }"
+      [iconName]="'angle-down-icon'"
+    ></app-icon>
+  </button>
+</div>
+
+<div class="group-details" *ngIf="showDetails">
+  <app-group-details [group]="group"></app-group-details>
+</div>

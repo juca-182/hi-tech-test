@@ -1,0 +1,13 @@
+$PATH: '/assets/fonts/';
+
+@mixin font($fontName, $folderName, $fileName, $weights, $style: 'normal') {
+  @each $weight in $weights {
+    @font-face {
+      font-family: $fontName;
+      font-style: $style;
+      font-weight: $weight;
+      src: url('#{$PATH}#{$folderName}/#{$fileName}-#{$weight}.ttf') format('truetype');
+    }
+  }
+}
+

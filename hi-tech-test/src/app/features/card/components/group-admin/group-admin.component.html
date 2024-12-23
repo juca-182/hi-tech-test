@@ -1,0 +1,26 @@
+<div class="group-admin-main-container">
+  <div class="group-admin-content">
+    <div class="survey-step">
+      <app-typography
+        [size]="'medium'"
+        [type]="'header'"
+        [fontColor]="'white'"
+        [fontWeight]="'bold'"
+        class="step-number"
+        >{{ index }}</app-typography
+      >
+      <app-typography class="step-content"> {{ textLabel }}</app-typography>
+      <div class="admin-separator"></div>
+
+      <button
+        [tooltip]="tooltipText"
+        class="action-button"
+        (click)="navigateToLink($event)"
+      >
+        <app-icon [iconName]="icon"></app-icon>
+      </button>
+    </div>
+  </div>
+</div>
+
+<ng-template #modalCopy></ng-template>
